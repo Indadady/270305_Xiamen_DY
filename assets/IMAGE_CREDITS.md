@@ -8,4 +8,4 @@
 | tulou.jpg | [20121101 Tianluokeng Tulou 01](https://commons.wikimedia.org/wiki/File:20121101_Tianluokeng_Tulou_01.jpg) | CC BY-SA |
 | gulangyu.jpg | [Gulangyu at dusk](https://commons.wikimedia.org/wiki/File:Gulangyu_at_dusk.jpg) | CC BY-SA |
 | huandao.jpg | [20230131 Huandao Road, Xiamen](https://commons.wikimedia.org/wiki/File:20230131_Huandao_Road,_Xiamen.jpg) | CC BY-SA |
-| hotel.jpg | [Courtyard by Marriott Hangzhou Qianjiang New City 04](https://commons.wikimedia.org/wiki/File:Courtyard_by_Marriott_Hangzhou_Qianjiang_New_City_04.jpg) — 코트야드 호텔 전경 (하문 하이창 공식 전경 확보 시 교체) | CC BY-SA |
+| hotel.jpg | 담당자 제공 — 샤먼 하이창 코트야드 메리어트 전경 | 사용자 지정 |
