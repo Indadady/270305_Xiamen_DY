@@ -16,7 +16,7 @@
     <meta name="description" content="고객님을 위한 하문(샤먼) 3박 4일 VIP 프리미엄 투어 공식 스마트 가이드북">
     <meta property="og:title" content="[VIP] 하문(샤먼) 3박 4일 프리미엄 투어">
     <meta property="og:description" content="품격 있는 귀하를 위한 완벽한 여정 (3월 5일 출발)">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1582236940899-04fa3e9e1bb3?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrlhqG0VrFTtg7rz-73_v0Onw1hvLZprdTyPymNLFO5UiG50DpHrl9s-TCXB9V">
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Tailwind CSS -->
@@ -37,7 +37,7 @@
         
         /* Hero Background */
         .hero-bg { 
-            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(0, 64, 152, 0.7)), url('https://images.unsplash.com/photo-1582236940899-04fa3e9e1bb3?q=80&w=1200&auto=format&fit=crop');
+            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(0, 64, 152, 0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrlhqG0VrFTtg7rz-73_v0Onw1hvLZprdTyPymNLFO5UiG50DpHrl9s-TCXB9V');
             background-size: cover; background-position: center; background-attachment: fixed;
         }
         @media(max-width:768px) { .hero-bg { background-attachment: scroll; } }
@@ -157,7 +157,7 @@
                 <div class="print-doc-no">문서번호: TM-270305-VIP40</div>
             </div>
             <div class="print-title">[단독] 럭셔리 하문(샤먼) 3박 4일 VIP 일정표</div>
-            <p class="print-subtitle">※ 본 일정표는 확정 안내문이며, 현지 기상 및 교통 상황에 따라 유연하게 진행됩니다.</p>
+            <p class="print-subtitle">※ 본 일정표는 안내 초안이며, 현지 기상 및 교통 상황에 따라 유연하게 진행됩니다.</p>
             
             <div class="print-overview">
                 <div><span class="label">일정</span> 2027.03.05(금) ~ 03.08(월)</div>
@@ -269,8 +269,8 @@
             </table>
             
             <div class="print-contacts">
-                <span><span class="pc-role">한국총괄</span> 정두영 이사 010-3841-1634</span>
-                <span><span class="pc-role">현지담당</span> 조영송 가이드 (배정 예정)</span>
+                <span><span class="pc-role">한국총괄</span> 정도영 이사 010-3841-1634</span>
+                <span><span class="pc-role">현지담당</span> 가이드 미정</span>
                 <span><span class="pc-role">영사콜센터</span> +82-2-3210-0404</span>
             </div>
             
@@ -365,7 +365,7 @@
             <div class="container mx-auto px-4 max-w-7xl">
                 <div class="text-center mb-8">
                     <h2 class="text-3xl font-bold text-slate-800">여정 동선 지도</h2>
-                    <p class="text-sm text-slate-500 mt-2">일자별 버튼을 클릭하여 이동 경로를 직관적으로 확인하세요.</p>
+                    <p class="text-sm text-slate-500 mt-2">전체 탭에서는 항공 노선(인천↔하문)을, 일자별 탭에서는 현지 동선을 확대하여 표시합니다.</p>
                 </div>
                 <div class="flex flex-wrap gap-2 justify-center mb-6">
                     <button onclick="changeMapAndTab('all')" class="map-tab-btn active px-5 py-2 rounded-full text-sm font-bold border bg-tm text-white border-tm shadow-sm transition-colors">전체</button>
@@ -375,7 +375,8 @@
                     <button onclick="changeMapAndTab('day4')" class="map-tab-btn px-5 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300 hover:bg-slate-50 transition-colors">4일차 귀국 <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#8b5cf6] ml-1"></span></button>
                 </div>
                 <div id="map"></div>
-                <p class="text-center text-xs text-slate-400 mt-4">※ 상기 지도는 주요 랜드마크 기준이며 실제 세부 이동과 다를 수 있습니다.</p>
+                <p id="map-hint" class="text-center text-xs text-tm font-bold mt-4">✈️ 전체 보기: 대한항공 직항 노선 (KE125 · KE126)</p>
+                <p class="text-center text-xs text-slate-400 mt-1">※ 상기 지도는 주요 랜드마크 기준이며 실제 세부 이동과 다를 수 있습니다.</p>
             </div>
         </section>
 
@@ -386,7 +387,7 @@
                     <div class="flex flex-wrap items-center justify-center gap-3">
                         <h2 class="text-3xl font-bold text-slate-800">일자별 상세 일정표</h2>
                         <button onclick="window.print()" class="no-print shrink-0 flex items-center gap-2 px-4 py-2 bg-tm hover:bg-tm-dark text-white text-sm font-bold rounded-xl shadow-md transition-colors">
-                            <i class="fa-solid fa-print"></i> 결재용 인쇄 (A4)
+                            <i class="fa-solid fa-print"></i> 일정표 인쇄하기
                         </button>
                     </div>
                 </div>
@@ -432,7 +433,7 @@
                                             <li>바다를 향해 있는 청나라 전쟁 유적 <strong>호리산 포대</strong></li>
                                         </ul>
                                     </div>
-                                    <img src="https://images.unsplash.com/photo-1548679847-5a1fa2db12f6?q=80&w=400&auto=format&fit=crop" alt="Nanputuo" class="schedule-thumb">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjiHCqsN4Y-WddtEJsB9A2cmkJvS0mBZkwOEW_lFyrQSe5OUSCqY3Nv0cgI-3u" alt="남보타사" class="schedule-thumb">
                                 </div>
                             </div>
                             <div class="relative bg-rose-50 p-5 rounded-2xl border border-rose-100">
@@ -480,7 +481,7 @@
                                             <li>아름다운 물길을 따라 형성된 장수마을 <strong>탑하촌</strong></li>
                                         </ul>
                                     </div>
-                                    <img src="https://images.unsplash.com/photo-1596726195610-d8ab1f8021c2?q=80&w=400&auto=format&fit=crop" alt="Tulou" class="schedule-thumb">
+                                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRfimqTkIy66aHdVTgzH74rWXqk_oZkSzPjRnWBRHQYS5bSo2qyxUO01tCWIanL" alt="남정토루" class="schedule-thumb">
                                 </div>
                             </div>
                             <div class="relative">
@@ -532,7 +533,7 @@
                                             <li>섬 전체의 붉은 지붕을 내려다보는 <strong>일광암</strong> 및 먹자골목</li>
                                         </ul>
                                     </div>
-                                    <img src="https://images.unsplash.com/photo-1579899385078-43d997cc0f25?q=80&w=400&auto=format&fit=crop" alt="Gulangyu" class="schedule-thumb">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRxVAEYDqY5DeCnhUHj6m5SzVUnz9dnGzfzY-8cH-pu4vA5QUs89FK9LXVIGOFr" alt="고랑서" class="schedule-thumb">
                                 </div>
                             </div>
                             <div class="relative">
@@ -577,7 +578,7 @@
                                         <h4 class="font-bold text-lg text-slate-800">환도로 풍경구</h4>
                                         <p class="text-sm text-slate-600 mt-2">아름다운 해변과 시원한 야자수 길을 감상할 수 있는 낭만적인 해안도로를 따라 공항으로 이동합니다.</p>
                                     </div>
-                                    <img src="https://images.unsplash.com/photo-1629810141644-8d4a9829f0ce?q=80&w=400&auto=format&fit=crop" alt="Beach Road" class="schedule-thumb">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR-0K9vtkQa2tcqVw0AL7xafWpywaSSeuZyuj64cE5MMLF_nwdJj_X8u1QaQmK6" alt="환도로 풍경구" class="schedule-thumb">
                                 </div>
                             </div>
                             <div class="relative">
@@ -604,10 +605,10 @@
                 </div>
                 <div class="grid lg:grid-cols-2 gap-8 items-center bg-slate-50 p-6 md:p-10 rounded-3xl border border-slate-200">
                     <div class="rounded-2xl overflow-hidden shadow-md">
-                        <img src="https://images.unsplash.com/photo-1566073171526-87316535456f?q=80&w=800&auto=format&fit=crop" alt="Marriott Hotel" class="w-full h-72 object-cover">
+                        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRd4drSi1vm8u-1VW98O6wFc67XR_Y8-F8QRoBlDHnNtDGRd053fn_-XnyxQDFc" alt="샤먼 하이창 코트야드 메리어트" class="w-full h-72 object-cover">
                     </div>
                     <div>
-                        <span class="bg-blue-100 text-tm text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">전일정 (3박) 확정</span>
+                        <span class="bg-blue-100 text-tm text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">전일정 (3박) 숙박</span>
                         <h3 class="text-2xl font-bold text-slate-800 mb-2">샤먼 하이창 코트야드 메리어트</h3>
                         <p class="text-sm text-slate-500 mb-6 font-medium">Courtyard by Marriott Xiamen Haicang</p>
                         
@@ -779,8 +780,8 @@
                         <h4 class="font-bold text-xl mb-2">투어메이커 상황실</h4>
                         <p class="text-xs text-blue-200 mb-6">VIP 고객 전담 매니저 및 현지 가이드 연결</p>
                         <div class="space-y-4">
-                            <div class="contact-row"><span class="contact-badge bg-white/20 text-white">한국총괄</span><div><p class="font-bold">정두영 이사</p><a href="tel:01038411634" class="text-sm font-bold text-blue-200 hover:text-white">010-3841-1634</a></div></div>
-                            <div class="contact-row"><span class="contact-badge bg-white/20 text-white">현지담당</span><div><p class="font-bold">조영송 가이드</p><p class="text-sm text-blue-200">배정 예정</p></div></div>
+                            <div class="contact-row"><span class="contact-badge bg-white/20 text-white">한국총괄</span><div><p class="font-bold">정도영 이사</p><a href="tel:01038411634" class="text-sm font-bold text-blue-200 hover:text-white">010-3841-1634</a></div></div>
+                            <div class="contact-row"><span class="contact-badge bg-white/20 text-white">현지담당</span><div><p class="font-bold">현지 가이드</p><p class="text-sm text-blue-200">미정</p></div></div>
                         </div>
                     </div>
                     <div class="bg-white p-8 rounded-3xl border border-blue-100 shadow-md">
@@ -896,19 +897,50 @@
             cruise: { c:[24.440, 118.075], t:'야강유람선/민남쇼', col:'#f59e0b', i:'<i class="fa-solid fa-ship"></i>' },
             huandao: { c:[24.435, 118.140], t:'환도로 풍경구', col:'#8b5cf6', i:'<i class="fa-solid fa-water"></i>' }
         };
+        const mapHints = {
+            all: '✈️ 전체 보기: 대한항공 직항 노선 (KE125 · KE126)',
+            day1: '📍 1일차: 하문 공항 도착 후 시내·남보타사 현지 동선',
+            day2: '📍 2일차: 남정토루 당일치기 · 증조안 야시장',
+            day3: '📍 3일차: 고랑서 · 중산로 · 야경 코스',
+            day4: '📍 4일차: 환도로 해안 드라이브 후 귀국 (현지+항공)'
+        };
         const routes = {
-            all: { p:['icn','xmn','zhongshan','nanputuo','hotel','tulou','zengcuoan','gulangyu','cruise','huandao','xmn','icn'], l:[
-                {pts:[spots.icn.c, spots.xmn.c], c:'#cbd5e1'},
-                {pts:[spots.xmn.c, spots.zhongshan.c, spots.nanputuo.c, spots.hotel.c], c:'#0ea5e9'},
-                {pts:[spots.hotel.c, spots.tulou.c, spots.zengcuoan.c, spots.hotel.c], c:'#10b981'},
-                {pts:[spots.hotel.c, spots.gulangyu.c, spots.cruise.c, spots.hotel.c], c:'#f59e0b'},
-                {pts:[spots.hotel.c, spots.huandao.c, spots.xmn.c], c:'#8b5cf6'},
-                {pts:[spots.xmn.c, spots.icn.c], c:'#cbd5e1'}
-            ]},
-            day1: { p:['icn','xmn','zhongshan','nanputuo','hotel'], l:[{pts:[spots.icn.c, spots.xmn.c, spots.zhongshan.c, spots.nanputuo.c, spots.hotel.c], c:'#0ea5e9'}] },
-            day2: { p:['hotel','tulou','zengcuoan'], l:[{pts:[spots.hotel.c, spots.tulou.c, spots.zengcuoan.c, spots.hotel.c], c:'#10b981'}] },
-            day3: { p:['hotel','gulangyu','zhongshan','cruise'], l:[{pts:[spots.hotel.c, spots.gulangyu.c, spots.zhongshan.c, spots.cruise.c, spots.hotel.c], c:'#f59e0b'}] },
-            day4: { p:['hotel','huandao','xmn','icn'], l:[{pts:[spots.hotel.c, spots.huandao.c, spots.xmn.c, spots.icn.c], c:'#8b5cf6'}] }
+            all: {
+                p: ['icn','xmn'],
+                zoom: ['icn','xmn'],
+                maxZoom: 5,
+                l: [
+                    { pts:[spots.icn.c, spots.xmn.c], c:'#004098', dash:'10,8', weight:3, label:'KE125 출국' },
+                    { pts:[spots.xmn.c, spots.icn.c], c:'#64748b', dash:'10,8', weight:3, label:'KE126 귀국' }
+                ]
+            },
+            day1: {
+                p: ['xmn','zhongshan','nanputuo','hotel'],
+                zoom: ['xmn','zhongshan','nanputuo','hotel'],
+                maxZoom: 13,
+                l: [{ pts:[spots.xmn.c, spots.zhongshan.c, spots.nanputuo.c, spots.hotel.c], c:'#0ea5e9', weight:4 }]
+            },
+            day2: {
+                p: ['hotel','tulou','zengcuoan'],
+                zoom: ['hotel','tulou','zengcuoan'],
+                maxZoom: 10,
+                l: [{ pts:[spots.hotel.c, spots.tulou.c, spots.zengcuoan.c, spots.hotel.c], c:'#10b981', weight:4 }]
+            },
+            day3: {
+                p: ['hotel','gulangyu','zhongshan','cruise'],
+                zoom: ['hotel','gulangyu','zhongshan','cruise'],
+                maxZoom: 13,
+                l: [{ pts:[spots.hotel.c, spots.gulangyu.c, spots.zhongshan.c, spots.cruise.c, spots.hotel.c], c:'#f59e0b', weight:4 }]
+            },
+            day4: {
+                p: ['hotel','huandao','xmn','icn'],
+                zoom: ['hotel','huandao','xmn'],
+                maxZoom: 12,
+                l: [
+                    { pts:[spots.hotel.c, spots.huandao.c, spots.xmn.c], c:'#8b5cf6', weight:4 },
+                    { pts:[spots.xmn.c, spots.icn.c], c:'#004098', dash:'10,8', weight:3, label:'KE126 귀국' }
+                ]
+            }
         };
 
         function initMap() {
@@ -940,17 +972,24 @@
             // Map Draw (원칙 1, 2, 3, 4, 5)
             if(!map || !layerGroup) return;
             layerGroup.clearLayers(); // 원칙 4
-            
+
             const route = routes[dayId] || routes.all;
+            const hintEl = document.getElementById('map-hint');
+            if (hintEl) hintEl.innerText = mapHints[dayId] || mapHints.all;
+
             let bounds = L.latLngBounds();
-            
+            const zoomKeys = route.zoom || route.p;
+
             // Draw Polylines & Animation (원칙 3)
-            route.l.forEach(line => { 
-                const pl = L.polyline(line.pts, { color: line.c, weight: 4, opacity: 0.8 }).addTo(layerGroup); 
+            route.l.forEach(line => {
+                const opts = { color: line.c, weight: line.weight || 4, opacity: 0.85 };
+                if (line.dash) opts.dashArray = line.dash;
+                const pl = L.polyline(line.pts, opts).addTo(layerGroup);
+                if (line.label) pl.bindTooltip('<b>'+line.label+'</b>', { sticky: true, direction: 'center' });
                 setTimeout(() => {
                     if(pl._path) {
                         const len = pl._path.getTotalLength();
-                        pl._path.style.strokeDasharray = len;
+                        pl._path.style.strokeDasharray = line.dash ? line.dash : len;
                         pl._path.style.strokeDashoffset = len;
                         pl._path.getBoundingClientRect();
                         pl._path.style.transition = "stroke-dashoffset 2s ease-in-out";
@@ -961,16 +1000,17 @@
 
             // Draw Markers (원칙 1, 5)
             route.p.forEach((key, idx) => {
-                const s = spots[key]; bounds.extend(s.c);
+                const s = spots[key];
                 const htmlStr = `<div class="map-marker-bubble" style="background:${s.col};width:32px;height:32px;animation:popIn 0.5s forwards;animation-delay:${idx*0.15}s;color:white;font-size:14px;">${s.i}</div>`;
                 L.marker(s.c, { icon: L.divIcon({ className: '', html: htmlStr, iconSize: [32,32], iconAnchor: [16,16] }) })
                  .bindTooltip('<b>'+s.t+'</b>', { direction: 'top' })
                  .addTo(layerGroup);
             });
 
-            // Fitbounds & Stabilize (원칙 2)
+            // Fitbounds: 현지 동선은 zoom 키만, 전체는 항공 노선 중심 (원칙 2)
+            zoomKeys.forEach(key => bounds.extend(spots[key].c));
             if (layerGroup.getLayers().length > 0) {
-                map.fitBounds(bounds, { padding: [40, 40], maxZoom: dayId === 'all' ? 5 : 12 });
+                map.fitBounds(bounds, { padding: [40, 40], maxZoom: route.maxZoom || 12 });
                 setTimeout(() => map.invalidateSize(), 300);
             }
             if(window.innerWidth < 1024 && dayId !== 'all') document.getElementById('map-section').scrollIntoView({ behavior: 'smooth' });
